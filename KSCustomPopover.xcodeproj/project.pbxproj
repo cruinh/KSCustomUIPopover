@@ -56,6 +56,9 @@
 		32FDD2DE161A35D400C04F05 /* popover-black-left-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-left-arrow-image@2x.png"; sourceTree = "<group>"; };
 		32FDD2DF161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-bottom-arrow-image@2x.png"; sourceTree = "<group>"; };
 		AA338AB61E781DF400ED80E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AA3D184A1E7845140018D145 /* bothBackgroundOptions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bothBackgroundOptions.png; sourceTree = "<group>"; };
+		AA3D184B1E7845140018D145 /* customBackgroundOnly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customBackgroundOnly.png; sourceTree = "<group>"; };
+		AA3D184C1E7845140018D145 /* dimview_only.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dimview_only.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 		32A935BE14E87B2A00A27D6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA3D18491E7844F30018D145 /* Screenshots */,
 				32CFCBFA14EB2C840044EF7A /* Images */,
 				32A935BF14E87B2A00A27D6C /* KSCustomPopover-Info.plist */,
 				32A935C014E87B2A00A27D6C /* InfoPlist.strings */,
@@ -150,6 +154,16 @@
 				32E7933C161A39600042A5D4 /* popover-black-bcg-image@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		AA3D18491E7844F30018D145 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				AA3D184A1E7845140018D145 /* bothBackgroundOptions.png */,
+				AA3D184B1E7845140018D145 /* customBackgroundOnly.png */,
+				AA3D184C1E7845140018D145 /* dimview_only.png */,
+			);
+			name = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
