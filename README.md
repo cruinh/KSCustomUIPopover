@@ -5,19 +5,19 @@ With these settings:
   #define CUSTOM_POPOVER_BACKGROUND NO
   #define USE_DIM_BACKGROUND_VIEW YES
 You'll get this:
-<img src="https://raw.githubusercontent.com/cruinh/KSCustomPopover/dimview_only.png" alt="Dim View Only" width="188" height="334">
+![dim  background only](KSCustomPopover/dimview_only.png)
 
 With these settings:
   #define CUSTOM_POPOVER_BACKGROUND YES
   #define USE_DIM_BACKGROUND_VIEW NO
 You'll get this:
-![alt tag](KSCustomPopover/customBackgroundOnly.png)
+![custom background only](KSCustomPopover/customBackgroundOnly.png)
 
 With these settings:
   #define CUSTOM_POPOVER_BACKGROUND YES
   #define USE_DIM_BACKGROUND_VIEW YES
 You'll get this:
-![alt tag](KSCustomPopover/bothBackgroundOptions.png)
+![both background options on](KSCustomPopover/bothBackgroundOptions.png)
 
 (original readme:)
 KSCustomPopover is an example project for my article: http://www.scianski.com/customizing-uipopover-with-uipopoverbackgroundview/. It shows how to customize UIPopover with images. Project is simple Utility Application template with additional KSCustomPopoverBackgroundView subclass of UIPopoverBackgroundView. This project uses features only available in iOS SDK 5.0 and later.
