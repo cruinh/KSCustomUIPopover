@@ -27,90 +27,92 @@
 #import "KSCustomPopoverMainViewController.h"
 #import "KSCustomPopoverBackgroundView.h"
 
+#define CUSTOM_POPOVER_BACKGROUND NO
+#define USE_DIM_BACKGROUND_VIEW YES
+
+@interface KSCustomPopoverMainViewController ()
+@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIBarButtonItem *bbItem;
+@property (nonatomic, strong) UIView *dimView;
+@end
+
 @implementation KSCustomPopoverMainViewController
-
-@synthesize flipsidePopoverController = _flipsidePopoverController;
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return YES;
+    [self _setupPopoverTest];
 }
 
 #pragma mark - Flipside View Controller
 
-- (void)flipsideViewControllerDidFinish:(KSCustomPopoverFlipsideViewController *)controller
-{
-    [self.flipsidePopoverController dismissPopoverAnimated:YES];
-    self.flipsidePopoverController = nil;
+- (void) _setupPopoverTest {
+    self.button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 75, 20)];
+    self.bbItem = [[UIBarButtonItem alloc] initWithCustomView:self.button];
+    [self.button setTitle:@"Popover" forState:UIControlStateNormal];
+    [self.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.button addTarget:self action:@selector(showPopover) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationItem setRightBarButtonItem:self.bbItem animated:false];
 }
 
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
-{
-    self.flipsidePopoverController = nil;
+- (void)showPopover {
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.modalPresentationStyle = UIModalPresentationPopover;
+    vc.view.backgroundColor = [UIColor magentaColor];
+    vc.preferredContentSize = CGSizeMake(200, 200);
+    vc.popoverPresentationController.delegate = self;
+    
+    if (CUSTOM_POPOVER_BACKGROUND) {
+        vc.popoverPresentationController.popoverBackgroundViewClass = [KSCustomPopoverBackgroundView class];
+    }
+    
+    if (USE_DIM_BACKGROUND_VIEW) {
+        [self _showDimView];
+    }
+    
+    [self presentViewController:vc animated:false completion:nil];
+    
+    vc.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp;
+    vc.popoverPresentationController.barButtonItem = self.bbItem;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
-        [[segue destinationViewController] setDelegate:self];
-        UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
-        popoverController.popoverBackgroundViewClass = [KSCustomPopoverBackgroundView class];
-        self.flipsidePopoverController = popoverController;
+- (void)_showDimView {
+    id<UIApplicationDelegate> delegate = [UIApplication sharedApplication].delegate;
+    UIView *rootView = delegate.window.rootViewController.view;
+    self.dimView = [[UIView alloc] initWithFrame:rootView.bounds];
+    self.dimView.backgroundColor = [UIColor blackColor];
+    self.dimView.alpha = 0;
+    [rootView addSubview:self.dimView];
+    
+    __weak KSCustomPopoverMainViewController *weakSelf = self;
+    [UIView animateWithDuration:0.1 animations:^{
+        weakSelf.dimView.alpha = 0.5;
+    }];
+}
+
+- (BOOL)popoverPresentationControllerShouldDismissPopover:(UIPopoverPresentationController *)popoverPresentationController {
+    
+    if (USE_DIM_BACKGROUND_VIEW) {
+        //You may expect we would dismiss the dimView in popoverPresentationControllerDidDismissPopover
+        //I'm dismissing it here instead so that it doesn't have to wait for the popover to disappear before it animates away
         
-        popoverController.delegate = self;
+        __weak KSCustomPopoverMainViewController *weakSelf = self;
+        [UIView animateWithDuration:0.1 animations:^{
+            weakSelf.dimView.alpha = 0;
+        } completion:^(BOOL finished) {
+            [weakSelf.dimView removeFromSuperview];
+            weakSelf.dimView = nil;
+        }];
     }
+    
+    return YES;
 }
 
-- (IBAction)togglePopover:(id)sender
-{
-    if (self.flipsidePopoverController) {
-        [self.flipsidePopoverController dismissPopoverAnimated:YES];
-        self.flipsidePopoverController = nil;
-    } else {
-        [self performSegueWithIdentifier:@"showAlternate" sender:sender];
-    }
+-(UIModalPresentationStyle) adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
 }
 
 @end

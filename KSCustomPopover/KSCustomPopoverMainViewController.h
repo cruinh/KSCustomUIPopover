@@ -24,10 +24,6 @@
 //  THE SOFTWARE.
 
 
-#import "KSCustomPopoverFlipsideViewController.h"
-
-@interface KSCustomPopoverMainViewController : UIViewController <KSCustomPopoverFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
-
-@property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+@interface KSCustomPopoverMainViewController : UIViewController <UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate>
 
 @end

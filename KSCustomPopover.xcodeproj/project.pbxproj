@@ -15,7 +15,6 @@
 		32A935C814E87B2A00A27D6C /* KSCustomPopoverAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A935C714E87B2A00A27D6C /* KSCustomPopoverAppDelegate.m */; };
 		32A935CB14E87B2A00A27D6C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A935C914E87B2A00A27D6C /* MainStoryboard.storyboard */; };
 		32A935CE14E87B2A00A27D6C /* KSCustomPopoverMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A935CD14E87B2A00A27D6C /* KSCustomPopoverMainViewController.m */; };
-		32A935D114E87B2A00A27D6C /* KSCustomPopoverFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A935D014E87B2A00A27D6C /* KSCustomPopoverFlipsideViewController.m */; };
 		32CFCBF814EB2B930044EF7A /* KSCustomPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFCBF714EB2B920044EF7A /* KSCustomPopoverBackgroundView.m */; };
 		32CFCC0014EB2CA50044EF7A /* popover-black-bcg-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CFCBFB14EB2CA50044EF7A /* popover-black-bcg-image.png */; };
 		32CFCC0114EB2CA50044EF7A /* popover-black-bottom-arrow-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CFCBFC14EB2CA50044EF7A /* popover-black-bottom-arrow-image.png */; };
@@ -27,6 +26,7 @@
 		32FDD2E2161A35D400C04F05 /* popover-black-right-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32FDD2DD161A35D400C04F05 /* popover-black-right-arrow-image@2x.png */; };
 		32FDD2E3161A35D400C04F05 /* popover-black-left-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32FDD2DE161A35D400C04F05 /* popover-black-left-arrow-image@2x.png */; };
 		32FDD2E4161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32FDD2DF161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png */; };
+		AA338AB71E781DF400ED80E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA338AB61E781DF400ED80E4 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,6 @@
 		32A935CA14E87B2A00A27D6C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		32A935CC14E87B2A00A27D6C /* KSCustomPopoverMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSCustomPopoverMainViewController.h; sourceTree = "<group>"; };
 		32A935CD14E87B2A00A27D6C /* KSCustomPopoverMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSCustomPopoverMainViewController.m; sourceTree = "<group>"; };
-		32A935CF14E87B2A00A27D6C /* KSCustomPopoverFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSCustomPopoverFlipsideViewController.h; sourceTree = "<group>"; };
-		32A935D014E87B2A00A27D6C /* KSCustomPopoverFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSCustomPopoverFlipsideViewController.m; sourceTree = "<group>"; };
 		32CFCBF614EB2B920044EF7A /* KSCustomPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCustomPopoverBackgroundView.h; sourceTree = "<group>"; };
 		32CFCBF714EB2B920044EF7A /* KSCustomPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCustomPopoverBackgroundView.m; sourceTree = "<group>"; };
 		32CFCBFB14EB2CA50044EF7A /* popover-black-bcg-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-bcg-image.png"; sourceTree = "<group>"; };
@@ -57,6 +55,7 @@
 		32FDD2DD161A35D400C04F05 /* popover-black-right-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-right-arrow-image@2x.png"; sourceTree = "<group>"; };
 		32FDD2DE161A35D400C04F05 /* popover-black-left-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-left-arrow-image@2x.png"; sourceTree = "<group>"; };
 		32FDD2DF161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-bottom-arrow-image@2x.png"; sourceTree = "<group>"; };
+		AA338AB61E781DF400ED80E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +84,7 @@
 		32A935A814E87B2A00A27D6C = {
 			isa = PBXGroup;
 			children = (
+				AA338AB61E781DF400ED80E4 /* Default-568h@2x.png */,
 				32A935BD14E87B2A00A27D6C /* KSCustomPopover */,
 				32A935B614E87B2A00A27D6C /* Frameworks */,
 				32A935B414E87B2A00A27D6C /* Products */,
@@ -117,8 +117,6 @@
 				32A935C914E87B2A00A27D6C /* MainStoryboard.storyboard */,
 				32A935CC14E87B2A00A27D6C /* KSCustomPopoverMainViewController.h */,
 				32A935CD14E87B2A00A27D6C /* KSCustomPopoverMainViewController.m */,
-				32A935CF14E87B2A00A27D6C /* KSCustomPopoverFlipsideViewController.h */,
-				32A935D014E87B2A00A27D6C /* KSCustomPopoverFlipsideViewController.m */,
 				3293D48314ED239A004BF851 /* Custom Popover Bacground View */,
 				32A935BE14E87B2A00A27D6C /* Supporting Files */,
 			);
@@ -180,7 +178,7 @@
 		32A935AA14E87B2A00A27D6C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0820;
 			};
 			buildConfigurationList = 32A935AD14E87B2A00A27D6C /* Build configuration list for PBXProject "KSCustomPopover" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -213,6 +211,7 @@
 				32CFCC0414EB2CA50044EF7A /* popover-black-top-arrow-image.png in Resources */,
 				32FDD2E2161A35D400C04F05 /* popover-black-right-arrow-image@2x.png in Resources */,
 				32FDD2E3161A35D400C04F05 /* popover-black-left-arrow-image@2x.png in Resources */,
+				AA338AB71E781DF400ED80E4 /* Default-568h@2x.png in Resources */,
 				32FDD2E4161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png in Resources */,
 				32E7933B161A38860042A5D4 /* popover-black-top-arrow-image@2x.png in Resources */,
 				32E7933D161A39600042A5D4 /* popover-black-bcg-image@2x.png in Resources */,
@@ -229,7 +228,6 @@
 				32A935C414E87B2A00A27D6C /* main.m in Sources */,
 				32A935C814E87B2A00A27D6C /* KSCustomPopoverAppDelegate.m in Sources */,
 				32A935CE14E87B2A00A27D6C /* KSCustomPopoverMainViewController.m in Sources */,
-				32A935D114E87B2A00A27D6C /* KSCustomPopoverFlipsideViewController.m in Sources */,
 				32CFCBF814EB2B930044EF7A /* KSCustomPopoverBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,12 +258,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -273,10 +282,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -286,16 +300,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -309,7 +337,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSCustomPopover/KSCustomPopover-Prefix.pch";
 				INFOPLIST_FILE = "KSCustomPopover/KSCustomPopover-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scianski.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -320,7 +351,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSCustomPopover/KSCustomPopover-Prefix.pch";
 				INFOPLIST_FILE = "KSCustomPopover/KSCustomPopover-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scianski.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
