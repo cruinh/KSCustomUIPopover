@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E183b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="Oaj-Eb-rBs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E183b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Oaj-Eb-rBs">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,10 +28,25 @@
         <scene sceneID="Z5O-no-Jcp">
             <objects>
                 <viewController id="pek-Sd-GCP" customClass="KSCustomPopoverMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rac-zL-jal"/>
+                        <viewControllerLayoutGuide type="bottom" id="7WS-3c-b1x"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O1T-Y5-Uup">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wakerlink.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KK8-nN-CIZ">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KK8-nN-CIZ" secondAttribute="trailing" id="EOG-u6-4Bl"/>
+                            <constraint firstItem="KK8-nN-CIZ" firstAttribute="top" secondItem="Rac-zL-jal" secondAttribute="bottom" id="gFw-If-a6e"/>
+                            <constraint firstItem="KK8-nN-CIZ" firstAttribute="leading" secondItem="O1T-Y5-Uup" secondAttribute="leading" id="gHc-tQ-g0K"/>
+                            <constraint firstItem="7WS-3c-b1x" firstAttribute="top" secondItem="KK8-nN-CIZ" secondAttribute="bottom" id="lAf-PK-i1m"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jMX-CM-WJt"/>
                 </viewController>
@@ -41,6 +55,9 @@
             <point key="canvasLocation" x="-1309" y="323"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Wakerlink.jpg" width="272" height="379"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

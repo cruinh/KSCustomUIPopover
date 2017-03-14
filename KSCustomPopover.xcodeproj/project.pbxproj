@@ -27,6 +27,7 @@
 		32FDD2E3161A35D400C04F05 /* popover-black-left-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32FDD2DE161A35D400C04F05 /* popover-black-left-arrow-image@2x.png */; };
 		32FDD2E4161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32FDD2DF161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png */; };
 		AA338AB71E781DF400ED80E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA338AB61E781DF400ED80E4 /* Default-568h@2x.png */; };
+		AA3D184E1E784A790018D145 /* Wakerlink.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA3D184D1E784A790018D145 /* Wakerlink.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		AA3D184A1E7845140018D145 /* bothBackgroundOptions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bothBackgroundOptions.png; sourceTree = "<group>"; };
 		AA3D184B1E7845140018D145 /* customBackgroundOnly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customBackgroundOnly.png; sourceTree = "<group>"; };
 		AA3D184C1E7845140018D145 /* dimview_only.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dimview_only.png; sourceTree = "<group>"; };
+		AA3D184D1E784A790018D145 /* Wakerlink.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wakerlink.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		32A935BE14E87B2A00A27D6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA3D184D1E784A790018D145 /* Wakerlink.jpg */,
 				AA3D18491E7844F30018D145 /* Screenshots */,
 				32CFCBFA14EB2C840044EF7A /* Images */,
 				32A935BF14E87B2A00A27D6C /* KSCustomPopover-Info.plist */,
@@ -193,6 +196,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					32A935B214E87B2A00A27D6C = {
+						DevelopmentTeam = 5B6E3NELS5;
+					};
+				};
 			};
 			buildConfigurationList = 32A935AD14E87B2A00A27D6C /* Build configuration list for PBXProject "KSCustomPopover" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -224,6 +232,7 @@
 				32CFCC0314EB2CA50044EF7A /* popover-black-right-arrow-image.png in Resources */,
 				32CFCC0414EB2CA50044EF7A /* popover-black-top-arrow-image.png in Resources */,
 				32FDD2E2161A35D400C04F05 /* popover-black-right-arrow-image@2x.png in Resources */,
+				AA3D184E1E784A790018D145 /* Wakerlink.jpg in Resources */,
 				32FDD2E3161A35D400C04F05 /* popover-black-left-arrow-image@2x.png in Resources */,
 				AA338AB71E781DF400ED80E4 /* Default-568h@2x.png in Resources */,
 				32FDD2E4161A35D400C04F05 /* popover-black-bottom-arrow-image@2x.png in Resources */,
@@ -348,6 +357,7 @@
 		32A935D514E87B2A00A27D6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 5B6E3NELS5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSCustomPopover/KSCustomPopover-Prefix.pch";
 				INFOPLIST_FILE = "KSCustomPopover/KSCustomPopover-Info.plist";
@@ -362,6 +372,7 @@
 		32A935D614E87B2A00A27D6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 5B6E3NELS5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSCustomPopover/KSCustomPopover-Prefix.pch";
 				INFOPLIST_FILE = "KSCustomPopover/KSCustomPopover-Info.plist";

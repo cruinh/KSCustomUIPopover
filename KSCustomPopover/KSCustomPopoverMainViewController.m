@@ -27,8 +27,9 @@
 #import "KSCustomPopoverMainViewController.h"
 #import "KSCustomPopoverBackgroundView.h"
 
-#define CUSTOM_POPOVER_BACKGROUND NO
-#define USE_DIM_BACKGROUND_VIEW YES
+#define CUSTOM_POPOVER_BACKGROUND YES
+#define USE_DIM_BACKGROUND_VIEW NO
+#define BLUR_DIM_BACKGROUND NO
 
 @interface KSCustomPopoverMainViewController ()
 @property (nonatomic, strong) UIButton *button;
@@ -83,14 +84,27 @@
     id<UIApplicationDelegate> delegate = [UIApplication sharedApplication].delegate;
     UIView *rootView = delegate.window.rootViewController.view;
     self.dimView = [[UIView alloc] initWithFrame:rootView.bounds];
-    self.dimView.backgroundColor = [UIColor blackColor];
-    self.dimView.alpha = 0;
+    
+    if (BLUR_DIM_BACKGROUND && UIAccessibilityIsReduceTransparencyEnabled() == FALSE) {
+        self.dimView.backgroundColor = [UIColor clearColor];
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        blurEffectView.frame = rootView.bounds;
+        blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [self.dimView addSubview:blurEffectView];
+    } else {
+        self.dimView.backgroundColor = [UIColor blackColor];
+    }
+    
+    self.dimView.alpha = 1;
     [rootView addSubview:self.dimView];
     
-    __weak KSCustomPopoverMainViewController *weakSelf = self;
-    [UIView animateWithDuration:0.1 animations:^{
-        weakSelf.dimView.alpha = 0.5;
-    }];
+    if (BLUR_DIM_BACKGROUND == FALSE) {
+        __weak KSCustomPopoverMainViewController *weakSelf = self;
+        [UIView animateWithDuration:0.1 animations:^{
+            weakSelf.dimView.alpha = 0.5;
+        }];
+    }
 }
 
 - (BOOL)popoverPresentationControllerShouldDismissPopover:(UIPopoverPresentationController *)popoverPresentationController {
@@ -98,14 +112,19 @@
     if (USE_DIM_BACKGROUND_VIEW) {
         //You may expect we would dismiss the dimView in popoverPresentationControllerDidDismissPopover
         //I'm dismissing it here instead so that it doesn't have to wait for the popover to disappear before it animates away
-        
-        __weak KSCustomPopoverMainViewController *weakSelf = self;
-        [UIView animateWithDuration:0.1 animations:^{
-            weakSelf.dimView.alpha = 0;
-        } completion:^(BOOL finished) {
-            [weakSelf.dimView removeFromSuperview];
-            weakSelf.dimView = nil;
-        }];
+
+        if (BLUR_DIM_BACKGROUND == NO) {
+            __weak KSCustomPopoverMainViewController *weakSelf = self;
+            [UIView animateWithDuration:0.1 animations:^{
+                weakSelf.dimView.alpha = 0;
+            } completion:^(BOOL finished) {
+                [weakSelf.dimView removeFromSuperview];
+                weakSelf.dimView = nil;
+            }];
+        } else {
+            [self.dimView removeFromSuperview];
+            self.dimView = nil;
+        }
     }
     
     return YES;
