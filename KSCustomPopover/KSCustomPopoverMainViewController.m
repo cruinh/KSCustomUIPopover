@@ -28,7 +28,7 @@
 #import "KSCustomPopoverBackgroundView.h"
 
 #define CUSTOM_POPOVER_BACKGROUND YES
-#define USE_DIM_BACKGROUND_VIEW NO
+#define USE_DIM_BACKGROUND_VIEW YES
 #define BLUR_DIM_BACKGROUND NO
 
 @interface KSCustomPopoverMainViewController ()

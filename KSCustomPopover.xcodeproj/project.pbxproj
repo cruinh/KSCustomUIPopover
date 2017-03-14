@@ -61,6 +61,7 @@
 		AA3D184B1E7845140018D145 /* customBackgroundOnly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customBackgroundOnly.png; sourceTree = "<group>"; };
 		AA3D184C1E7845140018D145 /* dimview_only.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dimview_only.png; sourceTree = "<group>"; };
 		AA3D184D1E784A790018D145 /* Wakerlink.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wakerlink.jpg; sourceTree = "<group>"; };
+		AA3D184F1E784D790018D145 /* blurBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blurBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +166,7 @@
 				AA3D184A1E7845140018D145 /* bothBackgroundOptions.png */,
 				AA3D184B1E7845140018D145 /* customBackgroundOnly.png */,
 				AA3D184C1E7845140018D145 /* dimview_only.png */,
+				AA3D184F1E784D790018D145 /* blurBackground.png */,
 			);
 			name = Screenshots;
 			sourceTree = "<group>";
