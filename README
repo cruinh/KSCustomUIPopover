@@ -5,7 +5,7 @@ With these settings:
   #define CUSTOM_POPOVER_BACKGROUND NO
   #define USE_DIM_BACKGROUND_VIEW YES
 You'll get this:
-[[KSCustomPopover/dimview_only.png]]
+<img src="https://raw.githubusercontent.com/cruinh/KSCustomPopover/dimview_only.png" alt="Dim View Only" width="188" height="334">
 
 With these settings:
   #define CUSTOM_POPOVER_BACKGROUND YES
